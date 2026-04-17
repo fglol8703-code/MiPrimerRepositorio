@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Películas Acción & Ciencia Ficción</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0f172a, #1e293b);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: #020617;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 30px;
+}
+
+h2 {
+    border-left: 5px solid #38bdf8;
+    padding-left: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #38bdf8;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #7c3aed;
+    border-radius: 8px;
+    font-size: 0.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 20px;
+}
+
+button {
+    background: #38bdf8;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🎬 Mejores Películas</h1>
+    <p>Acción 💥 & Ciencia Ficción 🚀 en un solo lugar</p>
+</header>
+
+<nav>
+    <a href="#accion">Acción</a>
+    <a href="#ciencia">Ciencia Ficción</a>
+    <a href="#extras">Extras</a>
+</nav>
+
+<section id="accion">
+    <h2>🔥 Acción</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>John Wick</h3>
+            <p>Un asesino retirado regresa para vengarse en un mundo criminal lleno de reglas.</p>
+            <span class="badge">⭐ 8.5/10</span>
+        </div>
+
+        <div class="card">
+            <h3>Mad Max: Fury Road</h3>
+            <p>Caos, velocidad y supervivencia en un mundo postapocalíptico.</p>
+            <span class="badge">⭐ 8.7/10</span>
+        </div>
+
+        <div class="card">
+            <h3>Gladiator</h3>
+            <p>Un general traicionado lucha por honor y justicia.</p>
+            <span class="badge">⭐ 8.5/10</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="ciencia">
+    <h2>🚀 Ciencia Ficción</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Interstellar</h3>
+            <p>Exploradores viajan por el espacio para salvar a la humanidad.</p>
+            <span class="badge">⭐ 8.6/10</span>
+        </div>
+
+        <div class="card">
+            <h3>The Matrix</h3>
+            <p>Una realidad falsa esconde la verdad del mundo.</p>
+            <span class="badge">⭐ 8.7/10</span>
+        </div>
+
+        <div class="card">
+            <h3>Blade Runner 2049</h3>
+            <p>Un futuro oscuro donde humanos y replicantes se confunden.</p>
+            <span class="badge">⭐ 8.0/10</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="extras">
+    <h2>⭐ Extras</h2>
+
+    <div class="card">
+        <p>🎥 Top películas actualizadas cada mes</p>
+        <p>🍿 Recomendaciones personalizadas</p>
+        <p>📺 Próximos estrenos</p>
+        <button onclick="alert('Próximamente más contenido 😎')">Ver más</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Películas Pro | Diseño profesional 💻</p>
+</footer>
+
+</body>
+</html>
