@@ -1,0 +1,172 @@
+/* ===== RESET Y BASE ===== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #1d4ed8 0%, transparent 60%),
+                radial-gradient(1000px 500px at 120% 10%, #7c3aed 0%, transparent 55%),
+                linear-gradient(120deg, #020617, #0f172a);
+    color: #e5e7eb;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 28px 16px;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(90deg, rgba(37,99,235,.85), rgba(124,58,237,.85));
+    box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing: .5px;
+}
+
+header p { opacity: .9; margin-top: 6px; }
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    background: rgba(2,6,23,.85);
+    padding: 12px;
+    position: sticky;
+    top: 88px;
+    z-index: 9;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    padding: 6px 2px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0%; height: 2px;
+    background: #38bdf8;
+    transition: width .25s ease;
+}
+
+nav a:hover { color: #38bdf8; }
+nav a:hover::after { width: 100%; }
+
+/* ===== SECCIONES ===== */
+section { padding: 36px 24px; max-width: 1200px; margin: auto; }
+
+h2 {
+    border-left: 6px solid #38bdf8;
+    padding-left: 12px;
+    margin-bottom: 18px;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0b1220, #0b1220) padding-box,
+                linear-gradient(120deg, #38bdf8, #7c3aed) border-box;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    padding: 20px;
+    transition: transform .35s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+/* brillo animado */
+.card::before {
+    content: '';
+    position: absolute;
+    inset: -40% -40% auto auto;
+    width: 120%; height: 120%;
+    background: radial-gradient(circle at 30% 30%, rgba(56,189,248,.25), transparent 40%);
+    transform: rotate(20deg);
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,.6);
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    color: #38bdf8;
+}
+
+.card p { margin: 0 0 10px 0; color: #cbd5f5; }
+
+.badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 10px;
+    background: linear-gradient(90deg, #7c3aed, #38bdf8);
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+/* etiqueta top */
+.card:nth-child(1)::after {
+    content: 'TOP';
+    position: absolute;
+    top: 12px; right: 12px;
+    background: #ef4444;
+    color: white;
+    font-size: .7rem;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+/* ===== BOTÓN ===== */
+button {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    letter-spacing: .3px;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 16px rgba(56,189,248,.35);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(56,189,248,.5);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: rgba(2,6,23,.9);
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    nav { gap: 14px; }
+    header { padding: 20px 10px; }
+    section { padding: 24px 14px; }
+}
