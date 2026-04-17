@@ -3,112 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 <title>Películas Acción & Ciencia Ficción</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #0f172a, #1e293b);
-    color: white;
-}
-
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    background: #020617;
-    padding: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-section {
-    padding: 30px;
-}
-
-h2 {
-    border-left: 5px solid #38bdf8;
-    padding-left: 10px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1e293b;
-    border-radius: 15px;
-    padding: 20px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #38bdf8;
-}
-
-.badge {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background: #7c3aed;
-    border-radius: 8px;
-    font-size: 0.8em;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 20px;
-}
-
-button {
-    background: #38bdf8;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #0ea5e9;
-}
-
-</style>
 </head>
+
 <body>
 
 <header>
@@ -167,6 +65,30 @@ button:hover {
             <h3>Blade Runner 2049</h3>
             <p>Un futuro oscuro donde humanos y replicantes se confunden.</p>
             <span class="badge">⭐ 8.0/10</span>
+        </div>
+
+    </div>
+</section>
+<section id="terror">
+    <h2>👻 Terror</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>The Conjuring</h3>
+            <p>Investigadores paranormales enfrentan fuerzas demoníacas en una casa embrujada.</p>
+            <span class="badge">⭐ 7.5/10</span>
+        </div>
+
+        <div class="card">
+            <h3>IT</h3>
+            <p>Un grupo de niños enfrenta a un terrorífico payaso que aparece cada 27 años.</p>
+            <span class="badge">⭐ 7.3/10</span>
+        </div>
+
+        <div class="card">
+            <h3>Insidious</h3>
+            <p>Una familia lucha contra entidades oscuras que acechan a su hijo.</p>
+            <span class="badge">⭐ 6.8/10</span>
         </div>
 
     </div>
